@@ -1,0 +1,36 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/appbar.chevron.left.png</file>
+        <file>images/downarrow.png</file>
+        <file>images/ear.png</file>
+        <file>images/highlightsoftbutton_alert.png</file>
+        <file>images/highlightsoftbutton_alert_left.png</file>
+        <file>images/highlightsoftbutton_alert_right.png</file>
+        <file>images/highlightsoftbutton_mfd.png</file>
+        <file>images/highlightsoftbutton_mfd_left.png</file>
+        <file>images/highlightsoftbutton_mfd_right.png</file>
+        <file>images/mfd5main.png</file>
+        <file>images/record_transparent.png</file>
+        <file>images/rightarrow.png</file>
+        <file>images/softbutton_alert.png</file>
+        <file>images/softbutton_alert_left.png</file>
+        <file>images/softbutton_alert_right.png</file>
+        <file>images/softbutton_mfd.png</file>
+        <file>images/softbutton_mfd_left.png</file>
+        <file>images/softbutton_mfd_right.png</file>
+        <file>images/sync.png</file>
+        <file>images/uparrow.png</file>
+        <file>LiberationSerif-Regular.ttf</file>
+        <file>images/leftarrow.png</file>
+        <file>images/mainbkg.png</file>
+        <file>images/centerbkg.png</file>
+        <file>images/leftmenu.png</file>
+        <file>images/cmdlist.png</file>
+        <file>images/cd.png</file>
+        <file>images/msg.png</file>
+        <file>images/tel.png</file>
+        <file>images/muparray.png</file>
+        <file>images/mf.png</file>
+        <file>images/Screen.png</file>
+    </qresource>
+</RCC>
