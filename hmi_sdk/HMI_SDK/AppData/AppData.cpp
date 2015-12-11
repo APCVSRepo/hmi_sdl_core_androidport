@@ -120,7 +120,7 @@ void AppData::setCurrentAppName(std::string appName)
 void AppData::recvFromServer(Json::Value jsonObj)
 {
     LOGI("AppData::recvFromServer");
-    int appID = jsonObj["params"]["appID"].asInt();
+    int appID = jsonObj["params"]["app_id"].asInt();
     if(m_i_currentAppID != appID)
     {
 //        m_i_currentAppID = appID;
@@ -129,8 +129,8 @@ void AppData::recvFromServer(Json::Value jsonObj)
     {
         std::string str_method = jsonObj["method"].asString();
 
-        if(str_method == "UI.GetCapabilities"){
-            LOGI("UI.GetCapabilities");
+        if(str_method == "BasicCommunication.SDLLog"){
+            //Json::Value dataJson=
         }
         else if(str_method == "UI.Show")
         {

@@ -20,6 +20,8 @@ DESTDIR=bin
 
 target.path=$$OUT_PWD/bin
 INSTALLS+=target
+#target.path = $$[QT_INSTALL_EXAMPLES]/multimedia/audiooutput
+#INSTALLS += target
 
 SOURCES += \
     main.cpp \
@@ -203,9 +205,9 @@ INSTALLS+=ffmpeg
 
 ################################for android
 android{
-#CONFIG += msc
-#CONFIG +=pico
-CONFIG  +=espeak
+#CONFIG -= msc
+#CONFIG += pico
+CONFIG  += espeak
 INCLUDEPATH +=  $$PWD/Include/msp \
                 $$PWD/Include/msp/android
 
@@ -221,7 +223,8 @@ ANDROID_EXTRA_LIBS = \
         $$PWD/Library/android/sdl/libsmartDeviceLinkCore.so
 msc{
 DEFINES += TTS_FLY_MSC
-LIBS += -L$$PWD/Library/android/msp  msc
+LIBS += -L$$PWD/Library/android/msp  -lmsc
+RESOURCES += Library/android/sdl/tts/msctts.qrc
 ANDROID_EXTRA_LIBS +=$$PWD/Library/android/msp/libmsc.so
 }
 pico{
