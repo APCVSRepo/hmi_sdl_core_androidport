@@ -1,5 +1,0 @@
-*.pro.user
-*.o
-moc_*.cpp
-Makefile
-*.so
