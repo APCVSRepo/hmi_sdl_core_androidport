@@ -44,7 +44,11 @@
 #include "utils/file_system.h"
 #include "utils/logger.h"
 
+#if defined(OS_WIN32)
 __declspec(dllexport) policy::PolicyManager* CreateManager() {
+#else
+policy::PolicyManager* CreateManager() {
+#endif
   return new policy::PolicyManagerImpl();
 }
 
