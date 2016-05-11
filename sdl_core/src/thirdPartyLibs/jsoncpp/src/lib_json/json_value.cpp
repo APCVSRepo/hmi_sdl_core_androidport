@@ -18,10 +18,11 @@
 #include <stdexcept>
 #include <cstring>
 #include <cassert>
+#include <cstddef>    // size_t
+
 #ifdef JSON_USE_CPPTL
 # include <cpptl/conststring.h>
 #endif
-#include <cstddef>    // size_t
 
 #define JSON_ASSERT_UNREACHABLE assert( false )
 #define JSON_ASSERT( condition ) assert( condition );  // @todo <= change this into an exception throw

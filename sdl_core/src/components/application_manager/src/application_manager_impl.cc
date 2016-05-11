@@ -32,6 +32,10 @@
 #ifdef MODIFY_FUNCTION_SIGN
 #include <global_first.h>
 #endif
+
+#include <time.h>
+#include <unistd.h>
+
 #include <climits>
 #include <string>
 #include <fstream>
@@ -52,7 +56,6 @@
 #include "utils/file_system.h"
 #include "application_manager/application_impl.h"
 #include "usage_statistics/counter.h"
-#include <time.h>
 
 #ifdef MODIFY_FUNCTION_SIGN
 #include <lib_msp_vr.h>

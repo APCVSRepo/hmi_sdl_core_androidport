@@ -36,16 +36,17 @@
 #ifdef MODIFY_FUNCTION_SIGN
 #include <global_first.h>
 #endif
-#include <iomanip>
 
 #include <libusb/libusb.h>
+#include <unistd.h>
+
+#include <iomanip>
 #ifdef OS_ANDROID
 #include <sstream>
 #endif
 
 #include "transport_manager/usb/libusb/usb_connection.h"
 #include "transport_manager/transport_adapter/transport_adapter_impl.h"
-
 #include "utils/logger.h"
 
 namespace transport_manager {

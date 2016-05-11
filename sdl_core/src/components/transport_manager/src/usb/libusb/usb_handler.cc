@@ -38,11 +38,12 @@
 #endif
 #include <cstring>
 #include <cstdlib>
+#include <unistd.h>
 
 #include "transport_manager/usb/common.h"
 #include "transport_manager/transport_adapter/transport_adapter_impl.h"
-
 #include "utils/logger.h"
+
 #ifdef OS_WIN32
 #include<vector>
 #include<iostream>
