@@ -87,8 +87,6 @@ uint64_t file_system::GetAvailableDiskSpace(const std::string& path) {
 uint32_t file_system::FileSize(const std::string &path) {
 #ifdef OS_WIN32
   return 1024 * 1024;
-	struct stat file_info;
-	stat(path.c_str(),&file_info);
 #else
   if (file_system::FileExists(path)) {
     struct stat file_info;
