@@ -41,7 +41,7 @@ endif()
 #when build on android plat,you should set -DCOMPILER_PATH=your compiler root path
 if(CMAKE_SYSTEM_NAME STREQUAL "Android")
 if(NOT COMPILER_PATH)
-SET(COMPILER_PATH "/opt/android-9-toolchain")
+SET(COMPILER_PATH "/opt/android-19-toolchain")
 endif()
 message(STATUS "Current cross compiler path is ${COMPILER_PATH}")
 SET(CMAKE_CXX_COMPILER "${COMPILER_PATH}/bin/arm-linux-androideabi-g++")
@@ -49,7 +49,7 @@ SET(CMAKE_C_COMPILER "${COMPILER_PATH}/bin/arm-linux-androideabi-gcc")
 endif()
 
 message(STATUS "Current build system name is ${CMAKE_SYSTEM_NAME}")
-message(STATUS "Current CMAKE_BUIDL_TYPE is ${CMAKE_BUIDL_TYPE}")
+message(STATUS "Current CMAKE_BUILD_TYPE is ${CMAKE_BUILD_TYPE}")
 
 #Jenkins integration section
 #dont modify this section if you don't know details about integration with Jenkins!!!
