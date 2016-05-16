@@ -67,6 +67,14 @@ void BasicCommunication::onRequest(Json::Value &request)
     else if (method == "BasicCommunication.UpdateDeviceList")
     {
         sendResult(id,"UpdateDeviceList");
+        Json::Value jsonDevices = request["params"]["deviceList"];
+        int size=jsonDevices.size();
+        for(int i=0;i<size;i++){
+            Json::Value params;
+            params["deviceInfo"]=jsonDevices[i];
+            sendNotification("BasicCommunication.OnDeviceChosen",params);
+            sendNotification("BasicCommunication.OnFindApplications",params);
+        }
     }
     else if (method == "BasicCommunication.ActivateApp")
     {
