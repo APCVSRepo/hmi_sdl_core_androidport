@@ -32,6 +32,7 @@ public:
 
 public:
     bool ConnectTo(std::vector<IChannel *> Channels, INetworkStatus * pNetwork = 0);
+    bool ConnectToVS(IChannel * ChannelVS, std::string sIP, int iPort, INetworkStatus * pNetwork = 0);
     void SendData(void * pHandle, void * pData, int iLength);
 
     void RunThread();
@@ -59,6 +60,8 @@ private:
     int m_iPort;
 
     std::vector<SOCK_HANDLE *> m_SocketHandles;
+
+    SOCK_HANDLE *getNewSocketHandle(IChannel *newChannel, std::string sIP, int iPort);
 };
 
 #endif // SOCKECTSTOSDL
